@@ -12,9 +12,13 @@ const ReplySchema = new Schema(
     },
     replyBody: {
       type: String,
+      required: 'You need to provide a reply body.',
+      trim: true
     },
     writtenBy: {
       type: String,
+      required: 'You need to provide a reply author.'
+
     },
     createdAt: {
       type: Date,
@@ -33,9 +37,13 @@ const CommentSchema = new Schema(
   {
     writtenBy: {
       type: String,
+      required: 'You need to provide a comment author.'
+
     },
     commentBody: {
       type: String,
+      required: 'You need to provide a comment body.'
+
     },
     createdAt: {
       type: Date,
