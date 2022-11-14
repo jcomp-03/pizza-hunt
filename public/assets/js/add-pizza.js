@@ -5,7 +5,8 @@ const $customToppingsList = document.querySelector('#custom-toppings-list');
 const handleAddTopping = event => {
   event.preventDefault();
 
-  const toppingValue = document.querySelector('#new-topping').value;
+  const toppingInput = document.querySelector('#new-topping');
+  let toppingValue = toppingInput.value;
 
   if (!toppingValue) {
     return false;
@@ -33,7 +34,7 @@ const handleAddTopping = event => {
   divWrapper.appendChild(label);
   $customToppingsList.appendChild(divWrapper);
 
-  toppingValue.value = '';
+  toppingInput.value = '';
 };
 
 const handlePizzaSubmit = event => {
